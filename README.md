@@ -41,7 +41,7 @@ pytorch版本的yolov3训练时所需的数据格式为[label, x_center, y_cente
 
 
 ## 目录解释
-
+```
 .
 ├── Annotations
 ├── checkpoints
@@ -57,7 +57,7 @@ pytorch版本的yolov3训练时所需的数据格式为[label, x_center, y_cente
 ├── tools
 ├── utils
 └── weights
-
+```
 1. Annotations  存放图片标注对应的.xml文件
 2. checkpoints  存放训练产生的权重文件
 3. config             存放模型等需要的配置文件
