@@ -1,5 +1,7 @@
 import os
 import cv2
+
+sets = ['train', 'test', 'val']
 def convert(src_file, dst_file):
     with open(src_file, 'r') as fr:
         with open(dst_file, 'w') as fw1:
@@ -23,10 +25,11 @@ def convert(src_file, dst_file):
                     fw1.write(image_name)
                     fw1.write('\n')
                     # 将归一化后的坐标信息写入dst_file2文件中
-                    with open('D:/WorkSpace/yoloServer/data/labels/' + image_num + '.txt', 'w') as fw2:
+                    with open('C:/Users/Ziroom/Desktop/pytorch-yolov3-final/data/labels/' + image_num + '.txt', 'w') as fw2:
                         fw2.write(label + ' ' + str(x_center) + ' ' + str(y_center) + ' ' + str(w) + ' ' + str(h))
 if __name__ == '__main__':
-    convert('D:/WorkSpace/yoloServer/data/train.txt', 'D:/WorkSpace/yoloServer/data/train_1.txt')
+    for image_set in sets:
+        convert('C:/Users/Ziroom/Desktop/pytorch-yolov3-final/ImageSets/%s.txt'%(image_set), 'C:/Users/Ziroom/Desktop/pytorch-yolov3-final/data/%s.txt'%(image_set))
 
                     
                         

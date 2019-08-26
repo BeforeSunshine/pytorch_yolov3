@@ -7,7 +7,7 @@ sets=['train', 'val', 'test']
 classes = ["TAM", "CL"]
 
 def convert_annotation(image_id, list_file):
-    in_file = open('D:/WorkSpace/yoloServer/Annotations/%s.xml'%(image_id))
+    in_file = open('C:/Users/Ziroom/Desktop/pytorch-yolov3-final/Annotations/%s.xml'%(image_id))
     tree=ET.parse(in_file)
     root = tree.getroot()
 
@@ -30,10 +30,10 @@ def convert_annotation(image_id, list_file):
 wd = getcwd()
 
 for image_set in sets:
-    image_ids = open('D:/WorkSpace/yoloServer/ImageSets/Main/%s.txt'%(image_set)).read().strip().split()
-    list_file = open('D:/WorkSpace/yoloServer/data/%s.txt'%(image_set), 'w')
+    image_ids = open('C:/Users/Ziroom/Desktop/pytorch-yolov3-final/ImageSets/Main/%s.txt'%(image_set)).read().strip().split()
+    list_file = open('C:/Users/Ziroom/Desktop/pytorch-yolov3-final/ImageSets/%s.txt'%(image_set), 'w')
     for image_id in image_ids:
-        list_file.write('D:/WorkSpace/yoloServer/JPEGImages/%s.jpg'%(image_id))
+        list_file.write('C:/Users/Ziroom/Desktop/pytorch-yolov3-final/data/images/%s.jpg'%(image_id))
         convert_annotation(image_id, list_file)
         list_file.write('\n')
     list_file.close()

@@ -16,9 +16,9 @@ current_path = os.path.dirname(__file__)
 
 class YOLO(object):
     _defaults = {
-        "model_def" : current_path + "/config/yolov3-custom.cfg",
-        "weights_path" : current_path + "/checkpoints/yolov3_ckpt_29.pth",
-        "class_path" : current_path + "/data/classes.names",
+        "model_def" : current_path + "/../config/yolov3-custom.cfg",
+        "weights_path" : current_path + "/../checkpoints/yolov3_ckpt_29.pth",
+        "class_path" : current_path + "/../data/classes.names",
         "conf_thres" : 0.4,
         "nms_thres" : 0.5,
         "img_size" : 416

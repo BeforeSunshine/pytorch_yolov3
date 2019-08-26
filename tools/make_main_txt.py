@@ -3,8 +3,8 @@ import random
 
 trainval_percent = 0.66
 train_percent = 0.5
-xmlfilepath = 'D:/WorkSpace/yoloServer/Annotations'
-txtsavepath = 'D:/WorkSpace/yoloServer/ImageSets/Main'
+xmlfilepath = 'C:/Users/Ziroom/Desktop/pytorch-yolov3-final/Annotations'
+txtsavepath = 'C:/Users/Ziroom/Desktop/pytorch-yolov3-final/ImageSets/Main'
 total_xml = os.listdir(xmlfilepath)
 
 num=len(total_xml)
@@ -14,10 +14,10 @@ tr=int(tv*train_percent)
 trainval= random.sample(list,tv)
 train=random.sample(trainval,tr)
 
-ftrainval = open('D:/WorkSpace/yoloServer/ImageSets/Main/trainval.txt', 'w')
-ftest = open('D:/WorkSpace/yoloServer/ImageSets/Main/test.txt', 'w')
-ftrain = open('D:/WorkSpace/yoloServer/ImageSets/Main/train.txt', 'w')
-fval = open('D:/WorkSpace/yoloServer/ImageSets/Main/val.txt', 'w')
+ftrainval = open('C:/Users/Ziroom/Desktop/pytorch-yolov3-final/ImageSets/Main/trainval.txt', 'w')
+ftest = open('C:/Users/Ziroom/Desktop/pytorch-yolov3-final/ImageSets/Main/test.txt', 'w')
+ftrain = open('C:/Users/Ziroom/Desktop/pytorch-yolov3-final/ImageSets/Main/train.txt', 'w')
+fval = open('C:/Users/Ziroom/Desktop/pytorch-yolov3-final/ImageSets/Main/val.txt', 'w')
 
 for i  in list:
     name=total_xml[i][:-4]+'\n'
